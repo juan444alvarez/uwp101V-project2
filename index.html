@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Chemistry — Work better, with anyone.</title>
+<meta name="description" content="Pick your Business Chemistry archetype and see how to work with every member of your team.">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="top-bar">
+  <button class="brand" id="brandBtn" title="Change your style" aria-label="Business Chemistry — change your style">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">Business Chemistry</span>
+  </button>
+
+  <div class="you-wrap" id="youWrap" hidden>
+    <button class="you-pill" id="youPill" aria-haspopup="menu" aria-expanded="false">
+      <span class="you-label">You are</span>
+      <span class="you-chip" id="youChip" data-arch="driver">Driver</span>
+      <svg class="chev" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1,1 5,5 9,1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+    </button>
+    <div class="style-menu" id="styleMenu" role="menu" aria-label="Change your style" hidden></div>
+  </div>
+</header>
+
+<main class="viewport" id="viewport">
+
+  <section class="screen screen-select" id="screen-select" aria-labelledby="selectTitle" hidden>
+    <h1 class="hero-title" id="selectTitle">Work better,<br>with anyone.</h1>
+    <p class="hero-sub">Every team is a mix of thinking styles. Pick the archetype that sounds most like you, and we&rsquo;ll show you how to work with everyone else.</p>
+    <div class="style-cards" id="styleCards">
+      <button class="style-card" data-arch="driver">
+        <span class="card-top"><span class="card-index">01 / Driver</span><span class="card-arrow" aria-hidden="true">&rarr;</span></span>
+        <span class="card-body"><span class="card-name">Driver</span><span class="card-desc">Direct, quantitative, focused on outcomes. You move fast, debate openly, and want decisions made.</span></span>
+      </button>
+      <button class="style-card" data-arch="guardian">
+        <span class="card-top"><span class="card-index">02 / Guardian</span><span class="card-arrow" aria-hidden="true">&rarr;</span></span>
+        <span class="card-body"><span class="card-name">Guardian</span><span class="card-desc">Methodical, detail&#8209;oriented, evidence&#8209;driven. You weigh risk and value getting it right over getting it fast.</span></span>
+      </button>
+      <button class="style-card" data-arch="pioneer">
+        <span class="card-top"><span class="card-index">03 / Pioneer</span><span class="card-arrow" aria-hidden="true">&rarr;</span></span>
+        <span class="card-body"><span class="card-name">Pioneer</span><span class="card-desc">Imaginative, energetic, comfortable with ambiguity. You see what could be and turn it into momentum.</span></span>
+      </button>
+      <button class="style-card" data-arch="integrator">
+        <span class="card-top"><span class="card-index">04 / Integrator</span><span class="card-arrow" aria-hidden="true">&rarr;</span></span>
+        <span class="card-body"><span class="card-name">Integrator</span><span class="card-desc">Empathic, diplomatic, relationship&#8209;first. You read the room and hold the team together.</span></span>
+      </button>
+    </div>
+  </section>
+
+  <section class="screen screen-team" id="screen-team" aria-labelledby="teamTitle" hidden>
+    <div class="team-head">
+      <h1 class="screen-title" id="teamTitle">Your team</h1>
+    </div>
+    <p class="screen-sub">Each one reads differently. Tap any name to see a profile tuned to how <em>you</em> work with them.</p>
+    <div class="team-grid" id="teamGrid"></div>
+  </section>
+
+  <section class="screen screen-profile" id="screen-profile" aria-label="Member profile" hidden>
+    <div class="back-row">
+      <button class="ghost-btn" id="backBtn">&larr; Back to team</button>
+    </div>
+    <div class="profile-grid" id="profileGrid"></div>
+  </section>
+
+</main>
+
+</body>
+</html>
