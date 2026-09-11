@@ -1,7 +1,7 @@
 'use strict';
 
 /* =====================================================================
-   Business Chemistry — WHERE TO PASTE YOUR DATA
+   Business Chemistry — WHERE YOUR DATA LIVES
    ---------------------------------------------------------------------
    All content lives in the MEMBERS array below. Nothing else in this
    file needs editing.
@@ -16,7 +16,7 @@
    Annie sees advice written for working with ANNIE specifically, not
    generic integrator advice.
 
-   FOR EACH OF THE 9 MEMBERS, PASTE:
+   FOR EACH OF THE 8 MEMBERS:
    1. name  — their display name
    2. arch  — their own style (colors the avatar + profile header)
    3. mix   — the four percentages shown on the profile meter
@@ -40,7 +40,7 @@ const ARCHES = {
   integrator: { label: 'Integrator', traits: 'empathic, diplomatic' },
 };
 
-/* ============ YOUR 9 TEAM MEMBERS — PASTE DATA BELOW ============ */
+/* ============ YOUR 8 TEAM MEMBERS ============ */
 
 const MEMBERS = [
 
@@ -49,8 +49,8 @@ const MEMBERS = [
     id: 'sylvia',              /* unique id — lowercase, no spaces */
     name: 'Sylvia C.',         /* e.g. 'Max R.' */
     arch: 'integrator',        /* THEIR style: 'driver' | 'guardian' | 'pioneer' | 'integrator' */
-    mix: { driver: 4, guardian: 39, pioneer: 11, integrator: 46 }, /* style-mix meter (0–100 each) — PASTE Sylvia's real percentages */
-    bio: [ /* left profile card — written about THIS person — PASTE Sylvia's bio */
+    mix: { driver: 4, guardian: 39, pioneer: 11, integrator: 46 }, /* style-mix meter (0–100 each) */
+    bio: [ /* left profile card — in their own words */
       { h: 'I connect as a peer', b: 'I like connecting with people as peers, regardless of classification. I believe we all learn from each other, and great ideas can come from anywhere! It’s one of the reasons I value teamwork so much, everyone brings their own unique strengths to the group.' },
       { h: 'I look for what brings us together', b: 'I really see myself as an Integrator since I love working together and finding consensus. But, I also know that too much consensus can water down a good idea, so I value having experts in the room to help shape the best outcome. I naturally look for connections between people and ideas, and I believe everything is linked in some way!' },
       { h: 'I listen and adjust', b: 'I try to adapt my chemistry style to fit the people I’m working with, even though it’s not always easy. I think good leaders learn to be flexible and adjust to different styles. When I meet someone, I like to set some ground rules and get a sense of how they prefer to work.' },
@@ -65,51 +65,33 @@ const MEMBERS = [
         lose: [ /* "How to lose" card — 3 tips */
           { t: 'Don\u2019t sacrifice thoroughness for speed', d: 'Avoid rushing decisions without considering their impact. Quick choices may overlook important perspectives and lead to concern about future issues.' },
           { t: 'Don\u2019t pitch on logic alone', d: 'Make your proposals more relatable by explaining how they affect real people and considering impacts beyond just numbers or results.' },
-          { t: 'Don\u2019t skip the warm-up', d: 'Don\u2019t jump straight into the details when starting a meeting. Start with a a short, genuine opening greeting to connect with your Integrator teammate.' },
+          { t: 'Don\u2019t skip the warm-up', d: 'Don\u2019t jump straight into the details when starting a meeting. Start with a short, genuine opening greeting to connect with your Integrator teammate.' },
         ],
-        build: {
-      drop: [
-        {
-          t: 'Build alignment quickly',
-          d: 'Use your natural instinct to get people on the same page so the conversation can move forward.',
-        },
-        {
-          t: 'Speak with calm clarity',
-          d: 'Say what you think in a thoughtful, direct way so your message is easy to act on.',
-        },
-      ],
-      adopt: {
-        t: 'Lead with the decision',
-        d: 'Open with the outcome, owner, and deadline so the focus stays on action.',
-      }, /* right column — 1 habit to adopt */
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Build alignment quickly', d: 'Use your natural instinct to get people on the same page so the conversation can move forward.' },
+            { t: 'Speak with calm clarity', d: 'Say what you think in a thoughtful, direct way so your message is easy to act on.' },
+          ],
+          adopt: { t: 'Lead with the decision', d: 'Open with the outcome, owner, and deadline so the focus stays on action.' }, /* right column — 1 habit to adopt */
         },
       },
       guardian:   { /* what a Guardian viewer sees */
         engage: [ /* "How to engage" card — 3 tips */
           { t: 'Lean into shared reflective styles', d: 'You both value thoughtfulness. Your Guardian instinct for the domino effects of changes complements her connective thinking.' },
           { t: 'Rally around the team', d: 'Because you both care intensely about quality and teamwork your shared instinct to build team connection can be a point of joy between you.' },
-          { t: 'Run with autonomy', d: 'Sylvia can be be \u201Chands-off\u201D with highly independent workers. Capitalize on this to process things independently whenever you need to delve deeper.' },
+          { t: 'Run with autonomy', d: 'Sylvia can be \u201Chands-off\u201D with highly independent workers. Capitalize on this to process things independently whenever you need to delve deeper.' },
         ],
         lose: [ /* "How to lose" card — 3 tips */
           { t: 'Don\u2019t dismiss the value of iteration', d: 'Both of you value thoughtful consideration over quick decisions. Rely on this iterative process, understanding that things may not be perfect on the first try.' },
           { t: 'Don\u2019t rush to identify problems', d: 'While Guardians naturally identify risks, premature critiques stifle Sylvia\u2019s collaborative energy. Work on holding logical critiques until the end of ideation.' },
-          { t: 'Don\u2019t always default to the details', d: 'Avoid reigning in the conversation back too quickly just because the lens widens. Cross-topic links are often where the useful synthesis lives.' },
+          { t: 'Don\u2019t always default to the details', d: 'Avoid reining the conversation back in too quickly just because the lens widens. Cross-topic links are often where the useful synthesis lives.' },
         ],
-        build: {
-      drop: [
-        {
-          t: 'Flag concerns early',
-          d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.',
-        },
-        {
-          t: 'Bring steady follow-through',
-          d: 'Stay consistent and reliable so others can trust the process and the outcome.',
-        },
-      ],
-      adopt: {
-        t: 'Anchor with specifics',
-        d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.',
-      }, /* right column — 1 habit to adopt */
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Flag concerns early', d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.' },
+            { t: 'Bring steady follow-through', d: 'Stay consistent and reliable so others can trust the process and the outcome.' },
+          ],
+          adopt: { t: 'Anchor with specifics', d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.' }, /* right column — 1 habit to adopt */
         },
       },
       pioneer:    { /* what a Pioneer viewer sees */
@@ -123,8 +105,8 @@ const MEMBERS = [
           { t: 'Don\u2019t dismiss structure or process', d: 'Acknowledge the standard, then make the case for the exception. She\u2019ll often be your biggest ally in breaking the rule once she sees you respect it.' },
           { t: 'Don\u2019t jump in without scaffolding', d: 'Outline collaboration framework and timelines for projects up front so you have the freedom to innovate while she enjoys the predictability.' },
         ],
-        build: { /* bottom "Build skills" card — PASTE Sylvia's content */
-          drop: [ /* left column — 2 habits to drop */
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
             { t: 'Invite diverse perspectives', d: 'Use your relationship-building strength to pull in ideas from different people and viewpoints.' },
             { t: 'Connect ideas to people', d: 'Frame the bigger purpose in a way that helps others feel excited to join in.' },
           ],
@@ -133,8 +115,8 @@ const MEMBERS = [
       },
       integrator: { /* what an Integrator viewer sees */
         engage: [ /* "How to engage" card — 3 tips */
-          { t: 'Spark creative synergy', d: 'As Integrators, both of you see connections everywhere Pair on forward thinking ideas together to find a symbiotic collaboration space.' },
-          { t: 'Balance big picture and details', d: 'Agree on main topics and dive into them after going high-level. Don\u2019t get so caught up in the big picture that you ignore the important details that live within them' },
+          { t: 'Spark creative synergy', d: 'As Integrators, both of you see connections everywhere. Pair on forward-thinking ideas together to find a symbiotic collaboration space.' },
+          { t: 'Balance big picture and details', d: 'Agree on main topics and dive into them after going high-level. Don\u2019t get so caught up in the big picture that you ignore the important details that live within them.' },
           { t: 'Choose your Integrator approach', d: 'Identify your Integrator subtype: Teamer or Dreamer. Teamers should foster collaboration and open dialogue; Dreamers should emphasize empathy and consensus.' },
         ],
         lose: [ /* "How to lose" card — 3 tips */
@@ -142,8 +124,8 @@ const MEMBERS = [
           { t: 'Don\u2019t pursue consensus at all costs', d: 'You both value every voice in a room, however this can dilute decisions. Sylvia values innovation and can agree to disagree when consensus would dull the outcome.' },
           { t: 'Don\u2019t tiptoe around each other', d: 'Empathy crowds momentum when neither Integrator wants to be the one to push. Permit each other to practice direct feedback and unvarnished takes.' },
         ],
-        build: { /* bottom "Build skills" card — PASTE Sylvia's content */
-          drop: [ /* left column — 2 habits to drop */
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
             { t: 'Create psychological safety', d: 'Keep making space for people to speak openly and feel heard.' },
             { t: 'Build consensus naturally', d: 'Continue helping the group find shared ground before moving ahead.' },
           ],
@@ -158,11 +140,11 @@ const MEMBERS = [
     id: 'jordyn',              /* unique id — lowercase, no spaces */
     name: 'Jordyn P.',         /* e.g. 'Max R.' */
     arch: 'integrator',        /* THEIR style: 'driver' | 'guardian' | 'pioneer' | 'integrator' */
-    mix: { driver: 13, guardian: 36, pioneer: 14, integrator: 37 }, /* style-mix meter (0–100 each) — PASTE Jordyn's real percentages */
-    bio: [ /* left profile card — written about THIS person — PASTE Jordyn's bio */
+    mix: { driver: 13, guardian: 36, pioneer: 14, integrator: 37 }, /* style-mix meter (0–100 each) */
+    bio: [ /* left profile card — in their own words */
       { h: 'Learns how you work', b: 'In my experience, collaboration is the best when we can tap into each other\u2019s expertise to understand communication styles and strengths. I like to ask for perspectives and learn how others approach coordination and teamwork.' },
       { h: 'Takes the time to find answers', b: 'I\u2019m easygoing and will help guide you where you need to go. I might not have the answer right away, but I take time to think things through and investigate what might be impacted. I\u2019ll always do my best to find the answers for you.' },
-      { h: 'A Pioneer outside of work', b: 'I see a big difference between my work and personal life. Personally, I lean more toward being a Pioneer. I like trying new things and just going for it, so I appreciate collaborating with people who have different styles,' },
+      { h: 'A Pioneer outside of work', b: 'I see a big difference between my work and personal life. Personally, I lean more toward being a Pioneer. I like trying new things and just going for it, so I appreciate collaborating with people who have different styles.' },
     ],
     advice: { /* 4 blocks — one per VIEWER style */
       driver:     { /* what a Driver viewer sees */
@@ -176,21 +158,12 @@ const MEMBERS = [
           { t: 'Don\u2019t skip the warm-up', d: 'Don\u2019t be so focused on a goal that you forget to connect personally. A short, genuine opening is enough. She\u2019ll match your pace for the rest of the time after.' },
           { t: 'Don\u2019t pitch on logic alone', d: 'You both thrive on facts and data. Be patient with Integrator\u2019s need to dig into the details. They can consider the larger implications of a decision this way.' },
         ],
-        build: {
-      drop: [
-        {
-          t: 'Build alignment quickly',
-          d: 'Use your natural instinct to get people on the same page so the conversation can move forward.',
-        },
-        {
-          t: 'Speak with calm clarity',
-          d: 'Say what you think in a thoughtful, direct way so your message is easy to act on.',
-        },
-      ],
-      adopt: {
-        t: 'Lead with the decision',
-        d: 'Open with the outcome, owner, and deadline so the focus stays on action.',
-      },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Build alignment quickly', d: 'Use your natural instinct to get people on the same page so the conversation can move forward.' },
+            { t: 'Speak with calm clarity', d: 'Say what you think in a thoughtful, direct way so your message is easy to act on.' },
+          ],
+          adopt: { t: 'Lead with the decision', d: 'Open with the outcome, owner, and deadline so the focus stays on action.' }, /* right column — 1 habit to adopt */
         },
       },
       guardian:   { /* what a Guardian viewer sees */
@@ -204,21 +177,12 @@ const MEMBERS = [
           { t: 'Don\u2019t rush to identify problems', d: 'While Guardians naturally identify risks, premature critiques stifle Integrators collaborative energy. Work on holding logical critiques until the end of ideation.' },
           { t: 'Don\u2019t always default to the details', d: 'Don\u2019t pull the conversation back too quickly when the lens widens. Cross-topic links are often where the useful synthesis lives.' },
         ],
-        build: {
-      drop: [
-        {
-          t: 'Flag concerns early',
-          d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.',
-        },
-        {
-          t: 'Bring steady follow-through',
-          d: 'Stay consistent and reliable so others can trust the process and the outcome.',
-        },
-      ],
-      adopt: {
-        t: 'Anchor with specifics',
-        d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.',
-      },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Flag concerns early', d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.' },
+            { t: 'Bring steady follow-through', d: 'Stay consistent and reliable so others can trust the process and the outcome.' },
+          ],
+          adopt: { t: 'Anchor with specifics', d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.' }, /* right column — 1 habit to adopt */
         },
       },
       pioneer:    { /* what a Pioneer viewer sees */
@@ -232,12 +196,12 @@ const MEMBERS = [
           { t: 'Don\u2019t dump ideas all together', d: 'Refrain from overwhelming Integrators with a barrage of new concepts without pausing for reflection or feedback. Aim to build structure and organize concepts.' },
           { t: 'Don\u2019t start without a plan', d: 'Outline collaboration framework and timelines for projects up front so you have the freedom to innovate while she enjoys the predictability.' },
         ],
-        build: { /* bottom "Build skills" card — PASTE Jordyn's content */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Invite diverse perspectives', d: 'Use your relationship-building strength to pull in ideas from different people and viewpoints.' },
+            { t: 'Connect ideas to people', d: 'Frame the bigger purpose in a way that helps others feel excited to join in.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Prototype before perfecting', d: 'Try a rough version early and let the idea evolve through experimentation.' }, /* right column — 1 habit to adopt */
         },
       },
       integrator: { /* what an Integrator viewer sees */
@@ -251,12 +215,12 @@ const MEMBERS = [
           { t: 'Don\u2019t endlessly weigh options', d: 'You connect easily, but temper your shared desire to over-explore all alternatives if you want to move things forward quickly.' },
           { t: 'Don\u2019t overcomplicate consensus', d: 'Avoid the trap of or seeking unanimous agreement on every single detail. This can slow progress down and stifle team decisiveness.' },
         ],
-        build: { /* bottom "Build skills" card — PASTE Jordyn's content */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Create psychological safety', d: 'Keep making space for people to speak openly and feel heard.' },
+            { t: 'Build consensus naturally', d: 'Continue helping the group find shared ground before moving ahead.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Close the loop clearly', d: 'Summarize the decision, next steps, and owners so momentum does not fade.' }, /* right column — 1 habit to adopt */
         },
       },
     },
@@ -267,11 +231,11 @@ const MEMBERS = [
     id: 'desiree',             /* unique id — lowercase, no spaces */
     name: 'Desiree C.',        /* e.g. 'Max R.' */
     arch: 'integrator',        /* THEIR style: 'driver' | 'guardian' | 'pioneer' | 'integrator' */
-    mix: { driver: 10, guardian: 30, pioneer: 20, integrator: 40 }, /* style-mix meter (0–100 each) — PASTE Desiree's real percentages */
+    mix: { driver: 10, guardian: 30, pioneer: 20, integrator: 40 }, /* style-mix meter (0–100 each) */
     bio: [ /* left profile card — in her own words; titles written to match each quote */
       { h: 'Starts with the person', b: 'I like getting to know people personally because we\u2019re all human beings behind the work. Finding common ground in things like art or design helps us build rapport over time.' },
       { h: 'Takes the time to find answers', b: 'I\u2019m easygoing and will help guide you where you need to go. I might not have the answer right away, but I take time to think things through and investigate what might be impacted. I\u2019ll always do my best to find the answers for you.' },
-      { h: 'A Pioneer outside of work', b: 'I see a big difference between my work and personal life. Personally, I lean more toward being a Pioneer. I like trying new things and just going for it, so I appreciate collaborating with people who have different styles,' },
+      { h: 'A Pioneer outside of work', b: 'I see a big difference between my work and personal life. Personally, I lean more toward being a Pioneer. I like trying new things and just going for it, so I appreciate collaborating with people who have different styles.' },
     ],
     advice: { /* 4 blocks — one per VIEWER style */
       driver:     { /* what a Driver viewer sees */
@@ -285,12 +249,12 @@ const MEMBERS = [
           { t: 'Don\u2019t overlook protocols', d: 'Bypassing established procedures usually means you will just have to circle back and do it again later, which drains both of your time and energy.' },
           { t: 'Don\u2019t be too inflexible', d: 'Remember that collaboration benefits from adaptability. If you\u2019re too set in your methods, you may miss opportunities for creative solutions.' },
         ],
-        build: { /* bottom "Build skills" card — PASTE Desiree's content */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Build alignment quickly', d: 'Use your natural instinct to get people on the same page so the conversation can move forward.' },
+            { t: 'Speak with calm clarity', d: 'Say what you think in a thoughtful, direct way so your message is easy to act on.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Lead with the decision', d: 'Open with the outcome, owner, and deadline so the focus stays on action.' }, /* right column — 1 habit to adopt */
         },
       },
       guardian:   { /* what a Guardian viewer sees */
@@ -300,25 +264,16 @@ const MEMBERS = [
           { t: 'Keep Progress Clear', d: 'Keep your teammate engaged and on track by sharing clear updates, structured steps, and practical checkpoints throughout your collaborative process.' },
         ],
         lose: [ /* "How to lose" card — 3 tips */
-          { t: 'Don\u2019t always default to the details', d: 'Avoid reigning in the conversation back too quickly just because the lens widens. Cross-topic links are often where useful synthesis lives.' },
+          { t: 'Don\u2019t always default to the details', d: 'Avoid reining the conversation back in too quickly just because the lens widens. Cross-topic links are often where useful synthesis lives.' },
           { t: 'Don\u2019t let caution kill creativity', d: 'You instinctively spot risks, but leading with overt caution can shut down new possibilities. Acknowledge pitfalls, but stay open to fresh solutions.' },
           { t: 'Don\u2019t frame structure as constraint', d: 'Prevent a core Integrator disconnect by framing necessary processes as tools that support the team\u2019s overall peace of mind, rather than just strict rules.' },
         ],
-        build: {
-      drop: [
-        {
-          t: 'Flag concerns early',
-          d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.',
-        },
-        {
-          t: 'Bring steady follow-through',
-          d: 'Stay consistent and reliable so others can trust the process and the outcome.',
-        },
-      ],
-      adopt: {
-        t: 'Anchor with specifics',
-        d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.',
-      },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Flag concerns early', d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.' },
+            { t: 'Bring steady follow-through', d: 'Stay consistent and reliable so others can trust the process and the outcome.' },
+          ],
+          adopt: { t: 'Anchor with specifics', d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.' }, /* right column — 1 habit to adopt */
         },
       },
       pioneer:    { /* what a Pioneer viewer sees */
@@ -332,12 +287,12 @@ const MEMBERS = [
           { t: 'Don\u2019t miss the advantage of structure', d: 'Structure can feel like a hurdle, but it helps ideas grow. Plan your ideas with Desiree\u2014use that as a springboard for your creativity so your ideas gain momentum.' },
           { t: 'Don\u2019t ignore the need for consensus', d: 'Taking time to build consensus in your conversation helps turn creative ideas into clear next steps that both of you can support and follow through on.' },
         ],
-        build: { /* bottom "Build skills" card — PASTE Desiree's content */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Invite diverse perspectives', d: 'Use your relationship-building strength to pull in ideas from different people and viewpoints.' },
+            { t: 'Connect ideas to people', d: 'Frame the bigger purpose in a way that helps others feel excited to join in.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Prototype before perfecting', d: 'Try a rough version early and let the idea evolve through experimentation.' }, /* right column — 1 habit to adopt */
         },
       },
       integrator: { /* what an Integrator viewer sees */
@@ -347,16 +302,16 @@ const MEMBERS = [
           { t: 'Choose your Integrator approach', d: 'Identify your Integrator subtype: Teamer or Dreamer. Teamers should foster collaboration and open dialogue; Dreamers should emphasize empathy and consensus.' },
         ],
         lose: [ /* "How to lose" card — 3 tips */
-          { t: 'Don\u2019t let care become avoidance', d: 'Withholding a concern can be considerate in the moment, but it often leavesa the person without hte information they need to truly show up.' },
+          { t: 'Don\u2019t let care become avoidance', d: 'Withholding a concern can be considerate in the moment, but it often leaves the person without the information they need to truly show up.' },
           { t: 'Don\u2019t endlessly weigh options', d: 'You connect easily, but temper your shared desire to over-explore all alternatives if you want to move things forward quickly.' },
           { t: 'Don\u2019t hesitate to be direct', d: 'Empathy crowds momentum when neither Integrator wants to be the one to push. Permit each other to practice direct feedback and unvarnished takes.' },
         ],
-        build: { /* bottom "Build skills" card — PASTE Desiree's content */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Create psychological safety', d: 'Keep making space for people to speak openly and feel heard.' },
+            { t: 'Build consensus naturally', d: 'Continue helping the group find shared ground before moving ahead.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Close the loop clearly', d: 'Summarize the decision, next steps, and owners so momentum does not fade.' }, /* right column — 1 habit to adopt */
         },
       },
     },
@@ -377,7 +332,7 @@ const MEMBERS = [
       driver:     { /* what a Driver viewer sees */
         engage: [ /* "How to engage" card — 3 tips */
           { t: 'Stay decisive and inclusive', d: 'Build stronger alignment with Jeremy by moving decisively and still making space for input and shared understanding.' },
-          { t: 'Keep collaboration conversational', d: 'Keep communication open, regular, and conversational so Jeremy feels collaboration feels natural.' },
+          { t: 'Keep collaboration conversational', d: 'Keep communication open, regular, and conversational so collaboration feels natural to Jeremy, not transactional.' },
           { t: 'Be clear and make room to contribute', d: 'Be direct about goals, but invite Jeremy into the process so he feels involved and able to contribute.' },
         ],
         lose: [ /* "How to lose" card — 3 tips */
@@ -385,18 +340,18 @@ const MEMBERS = [
           { t: 'Don’t sideline input', d: 'Include Jeremy in the work in a way that lets him contribute, because he values being part of the process.' },
           { t: 'Don’t wait too long to address issues', d: 'Bring up friction early and talk through problems before they grow, so you can improve the working relationship.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Build alignment quickly', d: 'Use your natural instinct to get people on the same page so the conversation can move forward.' },
+            { t: 'Speak with calm clarity', d: 'Say what you think in a thoughtful, direct way so your message is easy to act on.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Lead with the decision', d: 'Open with the outcome, owner, and deadline so the focus stays on action.' }, /* right column — 1 habit to adopt */
         },
       },
       guardian:     { /* what a Driver viewer sees */
         engage: [ /* "How to engage" card — 3 tips */
           { t: 'Stay decisive and inclusive', d: 'Build stronger alignment with Jeremy by moving decisively and still making space for input and shared understanding.' },
-          { t: 'Keep collaboration conversational', d: 'Keep communication open, regular, and conversational so Jeremy feels collaboration feels natural.' },
+          { t: 'Keep collaboration conversational', d: 'Keep communication open, regular, and conversational so collaboration feels natural to Jeremy, not transactional.' },
           { t: 'Be clear and make room to contribute', d: 'Be direct about goals, but invite Jeremy into the process so he feels involved and able to contribute.' },
         ],
         lose: [ /* "How to lose" card — 3 tips */
@@ -404,59 +359,50 @@ const MEMBERS = [
           { t: 'Don’t sideline input', d: 'Include Jeremy in the work in a way that lets him contribute, because he values being part of the process.' },
           { t: 'Don’t wait too long to address issues', d: 'Bring up friction early and talk through problems before they grow, so you can improve the working relationship.' },
         ],
-        build: {
-      drop: [
-        {
-          t: 'Flag concerns early',
-          d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.',
-        },
-        {
-          t: 'Bring steady follow-through',
-          d: 'Stay consistent and reliable so others can trust the process and the outcome.',
-        },
-      ],
-      adopt: {
-        t: 'Anchor with specifics',
-        d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.',
-      },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Flag concerns early', d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.' },
+            { t: 'Bring steady follow-through', d: 'Stay consistent and reliable so others can trust the process and the outcome.' },
+          ],
+          adopt: { t: 'Anchor with specifics', d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.' }, /* right column — 1 habit to adopt */
         },
       },
       pioneer:    { /* what a Pioneer viewer sees */
         engage: [ /* "How to engage" card — 3 tips */
           { t: 'Lead with momentum', d: 'As a Pioneer, you can move quickly and generate momentum. Collaborate by pairing energy with space for reflection, discussion, and shared input.' },
           { t: 'Share the big picture', d: 'Jeremy connects more easily when you explain the direction behind a big idea. Show the goal behind it and help him see how it ties to the work ahead.' },
-          { t: 'Stay in sync', d: 'Stay consistent on check-ins and commitments.  Jeremy responds well when your energy comes with reliability and follow-through.' },
+          { t: 'Stay in sync', d: 'Stay consistent on check-ins and commitments. Jeremy responds well when your energy comes with reliability and follow-through.' },
         ],
         lose: [ /* "How to lose" card — 3 tips */
           { t: 'Don’t start without a plan', d: 'Outline collaboration framework and project timelines up front so you both have clarity and the freedom to innovate within your own schedules.' },
           { t: 'Don’t rush to one solution', d: 'Do not rush to one solution before hearing others out. Integrators build stronger outcomes when you let them help shape the direction.' },
           { t: 'Don’t change agreements on the fly', d: 'Avoid making commitments and then altering them unexpectedly, as this creates confusion. Let them know in advance if something might change.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Invite diverse perspectives', d: 'Use your relationship-building strength to pull in ideas from different people and viewpoints.' },
+            { t: 'Connect ideas to people', d: 'Frame the bigger purpose in a way that helps others feel excited to join in.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Prototype before perfecting', d: 'Try a rough version early and let the idea evolve through experimentation.' }, /* right column — 1 habit to adopt */
         },
       },
       integrator: { /* what a Integrator viewer sees */
         engage: [ /* "How to engage" card — 3 tips */
-          { t: 'PASTE tip title', d: 'PASTE tip detail.' },
-          { t: 'PASTE tip title', d: 'PASTE tip detail.' },
-          { t: 'PASTE tip title', d: 'PASTE tip detail.' },
+          { t: 'Divide the work out loud', d: 'You both want to be genuinely in it. Agree early on who carries what so neither of you ends up hovering at the edge of the task.' },
+          { t: 'Let the conversation wander', d: 'Jeremy prefers exchanges that feel organic. Two Integrators can use that room to surface what a tight agenda would have skipped.' },
+          { t: 'Ask which kind of help he wants', d: 'He’ll take a fix or the space to solve it himself. Asking which one costs a sentence and saves you offering the wrong kind of support.' },
         ],
         lose: [ /* "How to lose" card — 3 tips */
-          { t: 'PASTE tip title', d: 'PASTE tip detail.' },
-          { t: 'PASTE tip title', d: 'PASTE tip detail.' },
-          { t: 'PASTE tip title', d: 'PASTE tip detail.' },
+          { t: 'Don’t soften the feedback', d: 'He asked for it straight. Wrapping a critique until it disappears leaves him without the one thing he told you he wanted.' },
+          { t: 'Don’t assume shared understanding', d: 'Rapport comes easily between you, which makes it easy to skip confirming ownership. Say the specifics out loud anyway.' },
+          { t: 'Don’t protect him from the work', d: 'Holding a task back to spare him is the fastest way to make him feel sidelined. Hand it over instead.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Create psychological safety', d: 'Keep making space for people to speak openly and feel heard.' },
+            { t: 'Build consensus naturally', d: 'Continue helping the group find shared ground before moving ahead.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Close the loop clearly', d: 'Summarize the decision, next steps, and owners so momentum does not fade.' }, /* right column — 1 habit to adopt */
         },
       },
     },
@@ -481,15 +427,15 @@ const MEMBERS = [
         ],
         lose: [ /* "How to lose" card — 3 tips */
           { t: 'Don’t skip the active listening', d: 'If you’re shaping your next point mid-sentence, you’re likely not actually absorbing what they’re saying. Let what they say land before you respond.' },
-          { t: 'Don’t sit on a problem', d: 'Don’t wait until youve 100% solved a problem to bring it up. Even if you like working things out on your own, sharing early keeps you both on the same page.' },
+          { t: 'Don’t sit on a problem', d: 'Don’t wait until you\u2019ve 100% solved a problem to bring it up. Even if you like working things out on your own, sharing early keeps you both on the same page.' },
           { t: 'Don’t hide the "how"', d: 'While you may prefer to skip to the bottom line, Integrators like to see the practical, linear progression of an idea. Take them through your thought process.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Build alignment quickly', d: 'Use your natural instinct to get people on the same page so the conversation can move forward.' },
+            { t: 'Speak with calm clarity', d: 'Say what you think in a thoughtful, direct way so your message is easy to act on.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Lead with the decision', d: 'Open with the outcome, owner, and deadline so the focus stays on action.' }, /* right column — 1 habit to adopt */
         },
       },
       guardian:    { /* what a Guardian viewer sees */
@@ -500,24 +446,15 @@ const MEMBERS = [
         ],
         lose: [ /* "How to lose" card — 3 tips */
           { t: 'Don’t leave practicality behind', d: 'Pitching new ideas without context can cause disconnects. Approach imaginative concepts with practical reality to help everyone see the bigger picture.' },
-          { t: 'Don’t overlook the fine print', d: 'Bring your teammate into the details early. The concerns they help surface now are easier to fix than  problems that might arise later on.' },
+          { t: 'Don’t overlook the fine print', d: 'Bring your teammate into the details early. The concerns they help surface now are easier to fix than problems that might arise later on.' },
           { t: 'Don’t pivot in silence', d: 'If you ever decide to shift your strategy, make a point to communicate it clearly. Changing directions without warning can leave people feeling confused or ignored.' },
         ],
-        build: {
-      drop: [
-        {
-          t: 'Flag concerns early',
-          d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.',
-        },
-        {
-          t: 'Bring steady follow-through',
-          d: 'Stay consistent and reliable so others can trust the process and the outcome.',
-        },
-      ],
-      adopt: {
-        t: 'Anchor with specifics',
-        d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.',
-      },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Flag concerns early', d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.' },
+            { t: 'Bring steady follow-through', d: 'Stay consistent and reliable so others can trust the process and the outcome.' },
+          ],
+          adopt: { t: 'Anchor with specifics', d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.' }, /* right column — 1 habit to adopt */
         },
       },
       pioneer:    { /* what a Pioneer viewer sees */
@@ -528,34 +465,34 @@ const MEMBERS = [
         ],
         lose: [ /* "How to lose" card — 3 tips */
           { t: 'Don’t leave practicality behind', d: 'Pitching new ideas without context can cause disconnects. Approach imaginative concepts with practical reality to help everyone see the bigger picture.' },
-          { t: 'Don’t overlook the fine print', d: 'Bring your teammate into the details early. The concerns they help surface now are easier to fix than  problems that might arise later on.' },
+          { t: 'Don’t overlook the fine print', d: 'Bring your teammate into the details early. The concerns they help surface now are easier to fix than problems that might arise later on.' },
           { t: 'Don’t pivot in silence', d: 'If you ever decide to shift your strategy, make a point to communicate it clearly. Changing directions without warning can leave people feeling confused or ignored.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Invite diverse perspectives', d: 'Use your relationship-building strength to pull in ideas from different people and viewpoints.' },
+            { t: 'Connect ideas to people', d: 'Frame the bigger purpose in a way that helps others feel excited to join in.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Prototype before perfecting', d: 'Try a rough version early and let the idea evolve through experimentation.' }, /* right column — 1 habit to adopt */
         },
       },
       integrator: { /* what a Integrator viewer sees */
         engage: [ /* "How to engage" card — 3 tips */
-          { t: 'Build on shared chemistry', d: 'You both thrive in positive, supportive environments, and she loves to recognize the team’s hard work. Highlight successes and show appreciation for effort. ' },
+          { t: 'Build on shared chemistry', d: 'You both thrive in positive, supportive environments, and she loves to recognize the team’s hard work. Highlight successes and show appreciation for effort.' },
           { t: 'Channel your secondary styles', d: 'Like-type pairs benefit from leaning into their secondary chemistry styles. By adding different perspectives, your work becomes even more complete.' },
           { t: 'Keep up with regular touchpoints', d: 'Check in with her consistently. Theresa prioritizes making sure people feel supported, which aligns with your own focus on relationships and well-being.' },
         ],
         lose: [ /* "How to lose" card — 3 tips */
           { t: 'Don’t let care become avoidance', d: 'Withholding a concern can feel considerate in the moment, but it often leaves the other person without the information they need to show up fully.' },
-          { t: 'Don’t skip the active listening ', d: 'Reading the room is a big Integrator strength, but the words themselves carry things the mood alone can’t. Make sure both are getting through!.' },
+          { t: 'Don’t skip the active listening', d: 'Reading the room is a big Integrator strength, but the words themselves carry things the mood alone can’t. Make sure both are getting through!' },
           { t: 'Don’t take directness personally', d: 'If a conversation gets straight to the point, or if she has to correct something; remember it’s about the work, not a personal attack.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Create psychological safety', d: 'Keep making space for people to speak openly and feel heard.' },
+            { t: 'Build consensus naturally', d: 'Continue helping the group find shared ground before moving ahead.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Close the loop clearly', d: 'Summarize the decision, next steps, and owners so momentum does not fade.' }, /* right column — 1 habit to adopt */
         },
       },
     },
@@ -568,9 +505,9 @@ const MEMBERS = [
     arch: 'guardian',        /* THEIR style: 'driver' | 'guardian' | 'pioneer' | 'integrator' */
     mix: { driver: 23, guardian: 42, pioneer: 8, integrator: 27 }, /* style-mix meter (0–100 each) */
     bio: [ /* left profile card — written about THIS person */
-      { h: 'At their best', b: 'PASTE bio paragraph.' },
-      { h: 'Under pressure', b: 'PASTE bio paragraph.' },
-      { h: 'What earns their trust', b: 'PASTE bio paragraph.' },
+      { h: 'At their best', b: 'Joe pairs Guardian rigor with a creative lens — he’ll pressure-test an idea and then help sharpen it, with his commitment to CalPERS members running through both.' },
+      { h: 'Under pressure', b: 'He wants proven ground. When the information is thin he slows down, looks for precedent and evidence, and can keep turning a problem over past the point of usefulness.' },
+      { h: 'What earns their trust', b: 'Preparation and follow-through. Signal whether you need the bottom line or the full breakdown, bring the tradeoffs along with the pitch, and he engages openly.' },
     ],
     advice: { /* 4 blocks — one per VIEWER style */
       driver:     { /* what a Driver viewer sees */
@@ -584,12 +521,12 @@ const MEMBERS = [
           { t: 'Don’t move fast without diligence', d: 'Moving fast can feel reckless to a Guardian. Set checkpoints to ask them what evidence they need to feel confident. Frame diligence as a quality gate, not a delay.' },
           { t: 'Don’t trust instinct alone', d: 'Deciding on partial information unsettles a Guardian who wants proven ground. Skipping tradeoffs and downsides makes your Driver confidence look like guesswork.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Build alignment quickly', d: 'Use your natural instinct to get people on the same page so the conversation can move forward.' },
+            { t: 'Speak with calm clarity', d: 'Say what you think in a thoughtful, direct way so your message is easy to act on.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Lead with the decision', d: 'Open with the outcome, owner, and deadline so the focus stays on action.' }, /* right column — 1 habit to adopt */
         },
       },
       guardian:   { /* what a Guardian viewer sees */
@@ -603,12 +540,12 @@ const MEMBERS = [
           { t: 'Don’t overanalyze', d: 'Guardians can turn problems over endlessly looking for “whys.” Agree upfront on which unknowns actually block the decision, and set the rest aside.' },
           { t: 'Don’t neglect the big picture', d: 'Don’t get so absorbed in details that you forget the bigger purpose; regularly step back together to ensure your work supports the broader mission.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Flag concerns early', d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.' },
+            { t: 'Bring steady follow-through', d: 'Stay consistent and reliable so others can trust the process and the outcome.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Anchor with specifics', d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.' }, /* right column — 1 habit to adopt */
         },
       },
       pioneer:    { /* what a Pioneer viewer sees */
@@ -620,33 +557,33 @@ const MEMBERS = [
         lose: [ /* "How to lose" card — 3 tips */
           { t: 'Don’t neglect evidence', d: 'Enthusiasm alone can feel thin to a Guardian. Pair your vision with data, precedent, or a clear track record so Joe can evaluate the idea on the substance, not just the energy behind it.' },
           { t: 'Don’t improvise without preparation', d: 'Guardians engage more openly when they know whether you’re brainstorming or proposing ideas. Bring a clear agenda and signal which mode you’re in so Joe can meet you there.' },
-          { t: 'Don’t rush the clock', d: 'Consciously slow down your natural urge to move fast, make gut-feeling decisions, and change direction on the fly. ' },
+          { t: 'Don’t rush the clock', d: 'Consciously slow down your natural urge to move fast, make gut-feeling decisions, and change direction on the fly.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Invite diverse perspectives', d: 'Use your relationship-building strength to pull in ideas from different people and viewpoints.' },
+            { t: 'Connect ideas to people', d: 'Frame the bigger purpose in a way that helps others feel excited to join in.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Prototype before perfecting', d: 'Try a rough version early and let the idea evolve through experimentation.' }, /* right column — 1 habit to adopt */
         },
       },
       integrator: { /* what a Integrator viewer sees */
         engage: [ /* "How to engage" card — 3 tips */
           { t: 'Lean into shared reflective styles', d: 'A Guardian will likely appreciate your tendency to be introspective and considerate. Think things through together and they’ll feel in sync.' },
           { t: 'Set pace', d: 'When starting new projects or initiatives, ask Guardians to help establish timelines & checkpoints. This ensures the team benefits from their structured approach.' },
-          { t: 'Encourage thoughtful input', d: 'Invite them to share their perspective on potential risks or challenges, and listen without immediately steering the conversation toward consensus' },
+          { t: 'Encourage thoughtful input', d: 'Invite them to share their perspective on potential risks or challenges, and listen without immediately steering the conversation toward consensus.' },
         ],
         lose: [ /* "How to lose" card — 3 tips */
-          { t: 'Don’t', d: 'PASTE tip detail.' },
-          { t: 'Don’t', d: 'PASTE tip detail.' },
-          { t: 'Don’t', d: 'PASTE tip detail.' },
+          { t: 'Don’t lock into high level thinking', d: 'Avoid jumping from topic to topic or only addressing issues superficially. Guardians appreciate thoroughness and clear, focused discussions.' },
+          { t: 'Don’t neglect solo processing', d: 'Although you both appreciate collaborative discussions, respect the Guardian’s need to process new information independently when they want to delve deeper.' },
+          { t: 'Don’t skip details', d: 'Don’t get so caught up in the big picture that you ignore the important details they’re attuned to. This can leave them feeling sidelined and concerned for future issues.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
-            { t: 'PASTE habit title', d: 'PASTE habit detail.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Create psychological safety', d: 'Keep making space for people to speak openly and feel heard.' },
+            { t: 'Build consensus naturally', d: 'Continue helping the group find shared ground before moving ahead.' },
           ],
-          adopt: { t: 'PASTE habit title', d: 'PASTE habit detail.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Close the loop clearly', d: 'Summarize the decision, next steps, and owners so momentum does not fade.' }, /* right column — 1 habit to adopt */
         },
       },
     },
@@ -675,12 +612,12 @@ const MEMBERS = [
           { t: 'Don\u2019t override responsibilities', d: 'Drivers often bring energy and determination to projects, but it\u2019s important to avoid unintentionally overshadowing your Integrator teammate. Make space for their input and ideas, so everyone feels valued and collaboration thrives.' },
           { t: 'Don\u2019t skip the warm-up', d: 'Don\u2019t launch straight into the details. A short, genuine opening beat is all she needs to feel connected, after which she\u2019ll match your pace for the rest of your time.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-          { t: 'Deciding while she is still gathering', d: 'She builds agreement before she commits. A call made mid-process does not just move fast, it removes the reason she would have backed it.' },
-          { t: 'Taking the whole room', d: 'Your energy fills the space without meaning to. Leave the pause long enough that she can actually use it.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Build alignment quickly', d: 'Use your natural instinct to get people on the same page so the conversation can move forward.' },
+            { t: 'Speak with calm clarity', d: 'Say what you think in a thoughtful, direct way so your message is easy to act on.' },
           ],
-          adopt: { t: 'Restate it before you rebut', d: 'You are quick to test an argument. Say her version back first and the test still happens \u2014 it just lands as partnership rather than dismissal.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Lead with the decision', d: 'Open with the outcome, owner, and deadline so the focus stays on action.' }, /* right column — 1 habit to adopt */
         },
       },
       guardian:   { /* what a Guardian viewer sees */
@@ -694,12 +631,12 @@ const MEMBERS = [
           { t: 'Don\u2019t rush to identify problems', d: 'While Guardians naturally spot risks, don\u2019t let concerns stifle ideas. Encourage ideation, so potential solutions can emerge before focusing on risks.' },
           { t: 'Don\u2019t always default to the details', d: 'Avoid reining the conversation back in too quickly just because the lens widens. Cross-topic links are often where the useful synthesis lives.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-          { t: 'Treating version one as the verdict', d: 'She works by iteration. Judging the first draft as though it were final ends a process that was doing its job.' },
-          { t: 'Leading every idea with the risk', d: 'You will spot the flaw first, reliably. Let a solution surface before the concern does and you still get to raise it.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Flag concerns early', d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.' },
+            { t: 'Bring steady follow-through', d: 'Stay consistent and reliable so others can trust the process and the outcome.' },
           ],
-          adopt: { t: 'Make thoroughness the shared pace', d: 'You both prefer considered over quick. Name that as the working agreement and your caution stops reading as friction and starts reading as the schedule.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Anchor with specifics', d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.' }, /* right column — 1 habit to adopt */
         },
       },
       pioneer:    { /* what a Pioneer viewer sees */
@@ -713,12 +650,12 @@ const MEMBERS = [
           { t: 'Don\u2019t dismiss structure or process', d: 'Acknowledge the standard, then make the case for the exception. She\u2019ll often be your biggest ally in breaking the rule once she sees you respect it.' },
           { t: 'Don\u2019t jump in without scaffolding', d: 'Outline collaboration framework and timelines for projects up front so you have the freedom to innovate while she enjoys the predictability.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-          { t: 'Generating without a pause', d: 'Continuous ideation is your engine. She needs a stop to organize the concepts and map execution before the next wave arrives.' },
-          { t: 'Skipping the standard entirely', d: 'Name the rule you want to break and why it exists. She will help you break it; she will not help you ignore it.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Invite diverse perspectives', d: 'Use your relationship-building strength to pull in ideas from different people and viewpoints.' },
+            { t: 'Connect ideas to people', d: 'Frame the bigger purpose in a way that helps others feel excited to join in.' },
           ],
-          adopt: { t: 'Schedule the refining session', d: 'Keep the open brainstorm you like running. Put a second, narrower meeting after it for prioritizing, and she gets her structure without costing you any range.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Prototype before perfecting', d: 'Try a rough version early and let the idea evolve through experimentation.' }, /* right column — 1 habit to adopt */
         },
       },
       integrator: { /* what an Integrator viewer sees */
@@ -732,12 +669,12 @@ const MEMBERS = [
           { t: 'Don\u2019t pursue consensus at all costs', d: 'You both value every voice in a room, however this can dilute decisions. Integrators value innovation and can agree to disagree when consensus would dull the outcome.' },
           { t: 'Don\u2019t tiptoe around each other', d: 'Empathy crowds momentum when neither Integrator wants to be the one to push. Permit each other to practice direct feedback and unvarnished takes.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-          { t: 'Counting every voice equally', d: 'You both want the whole room included. She would rather agree to disagree than let consensus dull the outcome \u2014 let her.' },
-          { t: 'Staying at altitude together', d: 'Two big-picture thinkers can circle a topic indefinitely. Converge on the main ones, then go into the details that live inside them.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Create psychological safety', d: 'Keep making space for people to speak openly and feel heard.' },
+            { t: 'Build consensus naturally', d: 'Continue helping the group find shared ground before moving ahead.' },
           ],
-          adopt: { t: 'Trade unvarnished takes on purpose', d: 'Neither of you wants to be the one who pushes. Give each other standing permission to be blunt and the empathy stops costing you both momentum.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Close the loop clearly', d: 'Summarize the decision, next steps, and owners so momentum does not fade.' }, /* right column — 1 habit to adopt */
         },
       },
     },
@@ -767,12 +704,12 @@ const MEMBERS = [
           { t: 'Don\u2019t wave off the small thing', d: 'When she flags something minor, the instinct is to say it isn\u2019t worth the time. She tends to remember the ones that turned out to matter.' },
           { t: 'Don\u2019t read quiet as agreement', d: 'She thinks carefully about what she wants to say before she says it. Silence in the room usually means she is still working, not that she is on board.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-          { t: 'Thinking out loud at her', d: 'You work a problem by talking it through. She works it by going quiet first, so the live volley gets you her draft rather than her analysis.' },
-          { t: 'Dismissing the minor point', d: 'Drivers and Pioneers tend to say don\u2019t worry about that. She has watched enough minor points turn into rework.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Build alignment quickly', d: 'Use your natural instinct to get people on the same page so the conversation can move forward.' },
+            { t: 'Speak with calm clarity', d: 'Say what you think in a thoughtful, direct way so your message is easy to act on.' },
           ],
-          adopt: { t: 'Send the material ahead', d: 'You already run a tight agenda. Send the material the day before and the same meeting gets you her full thinking instead of a first impression, at no cost to your clock.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Lead with the decision', d: 'Open with the outcome, owner, and deadline so the focus stays on action.' }, /* right column — 1 habit to adopt */
         },
       },
       guardian:   { /* what a Guardian viewer sees */
@@ -786,12 +723,12 @@ const MEMBERS = [
           { t: 'Don\u2019t make her wait on approvals', d: 'She works best where people comment directly and nothing sits in a chain of command. Unblock her in the document rather than in a meeting.' },
           { t: 'Don\u2019t leave it at a working relationship', d: 'She has said it takes real effort to reach past the few people she already trusts. A standing 1:1 does more for the two of you than another group call.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-          { t: 'Meeting in order to stay aligned', d: 'Two thorough people can meet about the work until there is no time left inside it. Write the update instead.' },
-          { t: 'Routing everything through approval', d: 'She has seen how fast things move when people comment directly. The chain of command is where her momentum goes.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Flag concerns early', d: 'Use your instinct to sense tension or risk and bring it into the conversation sooner.' },
+            { t: 'Bring steady follow-through', d: 'Stay consistent and reliable so others can trust the process and the outcome.' },
           ],
-          adopt: { t: 'Make the 1:1 a standing invite', d: 'You keep the calendar anyway. Put a recurring 1:1 on it and the relationship she says takes real effort gets built by the structure you were already maintaining.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Anchor with specifics', d: 'Add clear details, criteria, and timelines so decisions feel concrete and well-defined.' }, /* right column — 1 habit to adopt */
         },
       },
       pioneer:    { /* what a Pioneer viewer sees */
@@ -805,12 +742,12 @@ const MEMBERS = [
           { t: 'Don\u2019t wave off the practical question', d: 'She likes what is trusted and will ask how the idea actually runs. That question is her buying in, not pushing back.' },
           { t: 'Don\u2019t mistake pace for interest', d: 'She has been told before that she works slowly, and moving faster is something she is deliberately working on. Her speed is not a measure of how invested she is.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-          { t: 'Expecting the live riff', d: 'Brainstorming out loud is your home turf. Ask her for the same thing cold and you get her politeness rather than her ideas.' },
-          { t: 'Skipping the how', d: 'She is practical before she is inventive. The idea lands once she can see the version of it that actually runs.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Invite diverse perspectives', d: 'Use your relationship-building strength to pull in ideas from different people and viewpoints.' },
+            { t: 'Connect ideas to people', d: 'Frame the bigger purpose in a way that helps others feel excited to join in.' },
           ],
-          adopt: { t: 'Split the session in two', d: 'Pitch it, sleep on it, reconvene. You keep the open brainstorm you like and she arrives at the second half with something neither of you would have generated live.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Prototype before perfecting', d: 'Try a rough version early and let the idea evolve through experimentation.' }, /* right column — 1 habit to adopt */
         },
       },
       integrator: { /* what an Integrator viewer sees */
@@ -824,12 +761,12 @@ const MEMBERS = [
           { t: 'Don\u2019t collect options forever', d: 'You both like seeing every alternative before deciding. Agree on when the list closes, or the two of you will keep adding to it.' },
           { t: 'Don\u2019t soften it into nothing', d: 'She would rather hear it plainly from someone who is on her side. Kindness belongs in the delivery, not in the content.' },
         ],
-        build: { /* bottom "Build skills" card */
-          drop: [ /* left column — 2 habits to drop */
-          { t: 'Waiting for the circle to widen', d: 'You both default to the people you already trust. Neither of you reaches out first unless one of you puts it on a calendar.' },
-          { t: 'Adding one more option', d: 'You both want the full set in front of you before choosing. Say out loud when the list is closed.' },
+        build: { /* bottom "Build skills" card — same for every member; keyed to YOUR style */
+          drop: [ /* left column — 2 strengths to keep using */
+            { t: 'Create psychological safety', d: 'Keep making space for people to speak openly and feel heard.' },
+            { t: 'Build consensus naturally', d: 'Continue helping the group find shared ground before moving ahead.' },
           ],
-          adopt: { t: 'Be the trusted one who says it', d: 'She has told you exactly how hard feedback works for her: from someone on her side, delivered directly. Being that person is a move you are already equipped to make.' }, /* right column — 1 habit to adopt */
+          adopt: { t: 'Close the loop clearly', d: 'Summarize the decision, next steps, and owners so momentum does not fade.' }, /* right column — 1 habit to adopt */
         },
       },
     },
@@ -990,16 +927,19 @@ function renderProfile() {
 
 function dotRow(pct) {
   /* 10 dots span 0–100. Whole dots light up per 10 points; the remainder
-     partially fills the next dot so the row reads the exact value. */
+     partially fills the next dot, so the row reads the exact value.
+     The partial fill is inlined here so it needs no extra CSS rule. */
   const p = Math.max(0, Math.min(100, Number(pct) || 0));
   const full = Math.floor(p / 10);
-  const part = Math.round((p % 10) * 10); /* leftover as a 0–100% width */
+  const part = Math.round((p % 10) * 10); /* leftover, as a 0–100% width */
+  const mask = (w) => `-webkit-mask-image:linear-gradient(90deg,#000 ${w}%,transparent ${w}%);mask-image:linear-gradient(90deg,#000 ${w}%,transparent ${w}%)`;
   return Array.from({ length: 10 }, (_, i) => {
     if (i < full) return '<span class="on"></span>';
-    if (i === full && part > 0) return `<span class="on partial" style="--fill:${part}%"></span>`;
+    if (i === full && part > 0) return `<span class="on partial" style="${mask(part)}"></span>`;
     return '<span></span>';
   }).join('');
 }
+
 function checkSvg(color) {
   return `<svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M3.5 8.5 6.6 11.6 12.5 4.9" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
 }
